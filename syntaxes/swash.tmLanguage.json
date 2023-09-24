@@ -1,0 +1,92 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "swash",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"name": "support.function.builtin.swash",
+			"match": "\\b(trim|replace|padright|typeof|atoi|itoa|len|sprintf|sprint|printf|print|printn|require)\\b(?=\\()"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "punctuation.section.embedded.begin.swash",
+					"match": "<\\?swash"
+				},
+				{
+					"name": "punctuation.section.embedded.end.swash",
+					"match": "\\?>"
+				},
+				{
+					"name": "keyword.control.swash",
+					"match": "\\b(if|while|for|return)\\b"
+				},
+				{
+					"name": "support.function.swash",
+					"match": "\\w+(?=\\()"
+				},
+				{
+					"name": "support.function.builtin.swash",
+					"match": "\\b(trim|replace|padright|typeof|atoi|itoa|len|sprintf|sprint|printf|print|printn|require)\\b(?=\\()"
+				},
+				{
+					"name": "keyword.var.swash",
+					"match": "\\b(var)\\b"
+				},
+				{
+					"name": "comment.line.double-slash.swash",
+					"match": "\/\/[^\n]*"
+				},
+				{
+					"name": "constant.language.swash",
+					"match": "\\$\\w+"
+				},
+				{
+					"name": "keyword.operator.comparison.swash",
+					"match": "[<>]=?|==|!="
+				},
+				{
+					"name": "keyword.operator.arithmetic.swash",
+					"match": "[+\\-*/%^]"
+				},
+				{
+					"name": "constant.numeric.decimal.swash",
+					"match": "[-+]?\\d*\\.?\\d+"
+				},
+				{
+					"name": "constant.language.swash",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.swash",
+			"begin": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.swash"
+				}
+			},
+			"end": "\"",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.swash"
+				}
+			},
+			"patterns": [
+				{
+					"name": "constant.character.escape.swash",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.swash"
+}

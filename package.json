@@ -1,0 +1,25 @@
+{
+  "name": "swash",
+  "displayName": "Swash",
+  "description": "Swash Programming Language",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "swash",
+      "aliases": ["swash", "termfx"],
+      "extensions": [".swash", ".tfx"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "swash",
+      "scopeName": "source.swash",
+      "path": "./syntaxes/swash.tmLanguage.json"
+    }]
+  }
+}
